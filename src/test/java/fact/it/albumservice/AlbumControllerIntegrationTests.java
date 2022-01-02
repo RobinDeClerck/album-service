@@ -29,9 +29,9 @@ public class AlbumControllerIntegrationTests {
     @Autowired
     private AlbumRepository albumRepository;
 
-    private Album album1 = new Album("Pablo Honey", "Radiohead", "rock", "1993-02-22", "https://i.scdn.co/image/ab67616d00001e02df55e326ed144ab4f5cecf95");
-    private Album album2 = new Album("Reggatta de Blanc", "The Police", "rock", "1979-10-02", "https://i.scdn.co/image/ab67616d00001e028ec81cc654b45ade8bdf1486");
-    private Album album3 = new Album("Black Holes and Revelations", "Muse", "rock", "2006-07-03", "https://i.scdn.co/image/ab67616d00001e0228933b808bfb4cbbd0385400");
+    private Album album1 = new Album("Pablo Honey", "a74b1b7f-71a5-4011-9441-d0b5e4122711", "rock", "1993-02-22", "https://i.scdn.co/image/ab67616d00001e02df55e326ed144ab4f5cecf95");
+    private Album album2 = new Album("Reggatta de Blanc", "9e0e2b01-41db-4008-bd8b-988977d6019a", "rock", "1979-10-02", "https://i.scdn.co/image/ab67616d00001e028ec81cc654b45ade8bdf1486");
+    private Album album3 = new Album("Black Holes and Revelations", "9c9f1380-2516-4fc9-a3e6-f9f61941d090", "rock", "2006-07-03", "https://i.scdn.co/image/ab67616d00001e0228933b808bfb4cbbd0385400");
 
     @BeforeEach
     public void beforeAllTests() {
@@ -52,7 +52,7 @@ public class AlbumControllerIntegrationTests {
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.name", is("Pablo Honey")))
-                .andExpect(jsonPath("$.artist", is("Radiohead")))
+                .andExpect(jsonPath("$.artist", is("a74b1b7f-71a5-4011-9441-d0b5e4122711")))
                 .andExpect(jsonPath("$.genre", is("rock")))
                 .andExpect(jsonPath("$.release", is("1993-02-22")))
                 .andExpect(jsonPath("$.image", startsWith("https://i.scdn.co/image/")));
@@ -70,19 +70,19 @@ public class AlbumControllerIntegrationTests {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(3)))
                 .andExpect(jsonPath("$[0].name", is("Pablo Honey")))
-                .andExpect(jsonPath("$[0].artist", is("Radiohead")))
+                .andExpect(jsonPath("$[0].artist", is("a74b1b7f-71a5-4011-9441-d0b5e4122711")))
                 .andExpect(jsonPath("$[0].genre", is("rock")))
                 .andExpect(jsonPath("$[0].release", is("1993-02-22")))
                 .andExpect(jsonPath("$[0].image", startsWith("https://i.scdn.co/image/")))
 
                 .andExpect(jsonPath("$[1].name", is("Reggatta de Blanc")))
-                .andExpect(jsonPath("$[1].artist", is("The Police")))
+                .andExpect(jsonPath("$[1].artist", is("9e0e2b01-41db-4008-bd8b-988977d6019a")))
                 .andExpect(jsonPath("$[1].genre", is("rock")))
                 .andExpect(jsonPath("$[1].release", is("1979-10-02")))
                 .andExpect(jsonPath("$[1].image", startsWith("https://i.scdn.co/image/")))
 
                 .andExpect(jsonPath("$[2].name", is("Black Holes and Revelations")))
-                .andExpect(jsonPath("$[2].artist", is("Muse")))
+                .andExpect(jsonPath("$[2].artist", is("9c9f1380-2516-4fc9-a3e6-f9f61941d090")))
                 .andExpect(jsonPath("$[2].genre", is("rock")))
                 .andExpect(jsonPath("$[2].release", is("2006-07-03")))
                 .andExpect(jsonPath("$[2].image", startsWith("https://i.scdn.co/image/")));

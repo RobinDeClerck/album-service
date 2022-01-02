@@ -19,12 +19,15 @@ public class AlbumRestController {
     @PostConstruct
     public void fillDB() {
         if(albumRepository.count()==0) {
-            albumRepository.save(new Album("Typhoons", "Royal Blood", "rock", "2021-04-30", "https://i.scdn.co/image/ab67616d00001e02712b9c0f9a8d380e26a95c1c"));
-            albumRepository.save(new Album("The Bends", "Radiohead", "rock", "1995-03-13", "https://i.scdn.co/image/ab67616d00001e029293c743fa542094336c5e12"));
-            albumRepository.save(new Album("Pablo Honey", "Radiohead", "rock", "1993-02-22", "https://i.scdn.co/image/ab67616d00001e02df55e326ed144ab4f5cecf95"));
-            albumRepository.save(new Album("Reggatta de Blanc", "The Police", "rock", "1979-10-02", "https://i.scdn.co/image/ab67616d00001e028ec81cc654b45ade8bdf1486"));
-            albumRepository.save(new Album("Black Holes and Revelations", "Muse", "rock", "2006-07-03", "https://i.scdn.co/image/ab67616d00001e0228933b808bfb4cbbd0385400"));
-            albumRepository.save(new Album("The Resistance", "Muse", "rock", "2009-09-11", "https://i.scdn.co/image/ab67616d00001e02b6d4566db0d12894a1a3b7a2"));
+            albumRepository.save(new Album("Typhoons", "aa62b28e-b6d4-4086-91d4-e5fac1ed56f3", "rock", "2021-04-30", "https://i.scdn.co/image/ab67616d00001e02712b9c0f9a8d380e26a95c1c"));
+
+            albumRepository.save(new Album("The Bends", "a74b1b7f-71a5-4011-9441-d0b5e4122711", "rock", "1995-03-13", "https://i.scdn.co/image/ab67616d00001e029293c743fa542094336c5e12"));
+            albumRepository.save(new Album("Pablo Honey", "a74b1b7f-71a5-4011-9441-d0b5e4122711", "rock", "1993-02-22", "https://i.scdn.co/image/ab67616d00001e02df55e326ed144ab4f5cecf95"));
+
+            albumRepository.save(new Album("Reggatta de Blanc", "9e0e2b01-41db-4008-bd8b-988977d6019a", "rock", "1979-10-02", "https://i.scdn.co/image/ab67616d00001e028ec81cc654b45ade8bdf1486"));
+
+            albumRepository.save(new Album("Black Holes and Revelations", "9c9f1380-2516-4fc9-a3e6-f9f61941d090", "rock", "2006-07-03", "https://i.scdn.co/image/ab67616d00001e0228933b808bfb4cbbd0385400"));
+            albumRepository.save(new Album("The Resistance", "9c9f1380-2516-4fc9-a3e6-f9f61941d090", "rock", "2009-09-11", "https://i.scdn.co/image/ab67616d00001e02b6d4566db0d12894a1a3b7a2"));
         }
     }
 
