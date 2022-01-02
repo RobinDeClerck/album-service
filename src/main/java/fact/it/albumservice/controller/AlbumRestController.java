@@ -33,9 +33,9 @@ public class AlbumRestController {
         return this.albumRepository.findAll();
     }
 
-    @GetMapping("/artists/{name}")
+    @GetMapping("/albums/{name}")
     public Album getArtistByName(@PathVariable String name) {
-        return this.albumRepository.findArtistByName(name);
+        return this.albumRepository.findAlbumByName(name);
     }
 
 }
