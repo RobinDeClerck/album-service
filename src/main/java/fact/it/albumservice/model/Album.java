@@ -7,13 +7,15 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Album {
     @Id
     private String id;
+    private String MAID;
     private String name;
     private String image;
     private String genre;
     private String artist;
     private String release;
 
-    public Album(String name,  String artist, String genre, String release, String image) {
+    public Album(String MAID, String name, String artist, String genre, String release, String image) {
+        this.MAID = MAID;
         this.name = name;
         this.image = image;
         this.genre = genre;
@@ -27,6 +29,14 @@ public class Album {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getMAID() {
+        return MAID;
+    }
+
+    public void setMAID(String MAID) {
+        this.MAID = MAID;
     }
 
     public String getName() {
