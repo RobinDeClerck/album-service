@@ -11,15 +11,15 @@ public class Album {
     private String name;
     private String image;
     private String genre;
-    private String artist;
+    private String MBID;
     private String release;
 
-    public Album(String MAID, String name, String artist, String genre, String release, String image) {
+    public Album(String MAID, String name, String MBID, String genre, String release, String image) {
         this.MAID = MAID;
         this.name = name;
         this.image = image;
         this.genre = genre;
-        this.artist = artist;
+        this.MBID = MBID;
         this.release = release;
     }
 
@@ -63,12 +63,12 @@ public class Album {
         this.genre = genre;
     }
 
-    public String getArtist() {
-        return artist;
+    public String getMBID() {
+        return MBID;
     }
 
-    public void setArtist(String artist) {
-        this.artist = artist;
+    public void setMBID(String MBID) {
+        this.MBID = MBID;
     }
 
     public String getRelease() {

@@ -53,7 +53,7 @@ public class AlbumControllerIntegrationTests {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.maid", is("cd76f76b-ff15-3784-a71d-4da3078a6851")))
                 .andExpect(jsonPath("$.name", is("Pablo Honey")))
-                .andExpect(jsonPath("$.artist", is("a74b1b7f-71a5-4011-9441-d0b5e4122711")))
+                .andExpect(jsonPath("$.mbid", is("a74b1b7f-71a5-4011-9441-d0b5e4122711")))
                 .andExpect(jsonPath("$.genre", is("rock")))
                 .andExpect(jsonPath("$.release", is("1993-02-22")))
                 .andExpect(jsonPath("$.image", startsWith("https://i.scdn.co/image/")));
@@ -72,21 +72,21 @@ public class AlbumControllerIntegrationTests {
                 .andExpect(jsonPath("$", hasSize(3)))
                 .andExpect(jsonPath("$[0].maid", is("cd76f76b-ff15-3784-a71d-4da3078a6851")))
                 .andExpect(jsonPath("$[0].name", is("Pablo Honey")))
-                .andExpect(jsonPath("$[0].artist", is("a74b1b7f-71a5-4011-9441-d0b5e4122711")))
+                .andExpect(jsonPath("$[0].mbid", is("a74b1b7f-71a5-4011-9441-d0b5e4122711")))
                 .andExpect(jsonPath("$[0].genre", is("rock")))
                 .andExpect(jsonPath("$[0].release", is("1993-02-22")))
                 .andExpect(jsonPath("$[0].image", startsWith("https://i.scdn.co/image/")))
 
                 .andExpect(jsonPath("$[1].maid", is("2b98e6d7-a521-332f-961e-d281ba33ba3d")))
                 .andExpect(jsonPath("$[1].name", is("Reggatta de Blanc")))
-                .andExpect(jsonPath("$[1].artist", is("9e0e2b01-41db-4008-bd8b-988977d6019a")))
+                .andExpect(jsonPath("$[1].mbid", is("9e0e2b01-41db-4008-bd8b-988977d6019a")))
                 .andExpect(jsonPath("$[1].genre", is("rock")))
                 .andExpect(jsonPath("$[1].release", is("1979-10-02")))
                 .andExpect(jsonPath("$[1].image", startsWith("https://i.scdn.co/image/")))
 
                 .andExpect(jsonPath("$[2].maid", is("af2e8e23-e9c3-4e67-8ad8-66387c5898fd")))
                 .andExpect(jsonPath("$[2].name", is("Black Holes and Revelations")))
-                .andExpect(jsonPath("$[2].artist", is("9c9f1380-2516-4fc9-a3e6-f9f61941d090")))
+                .andExpect(jsonPath("$[2].mbid", is("9c9f1380-2516-4fc9-a3e6-f9f61941d090")))
                 .andExpect(jsonPath("$[2].genre", is("rock")))
                 .andExpect(jsonPath("$[2].release", is("2006-07-03")))
                 .andExpect(jsonPath("$[2].image", startsWith("https://i.scdn.co/image/")));
